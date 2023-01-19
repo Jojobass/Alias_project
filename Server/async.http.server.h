@@ -20,8 +20,9 @@ class server;
 
 typedef boost::asio::ip::tcp tcp;
 
-const std::string HOST = "localhost";
-const std::string SCHEMA_NAME = "test";
+const std::string HOST = "mysql_alias";
+const std::string PORT = "3306";
+const std::string SCHEMA_NAME = "AliasApp";
 const std::string USERNAME1 = "server_1";
 const std::string PWD1 = "1111";
 const std::string USERNAME2 = "server_2";

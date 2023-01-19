@@ -3,7 +3,7 @@
 //установление соединения, создание БД если нет
 DBConnection::DBConnection(std::string host, std::string username, std::string pwd, std::string schema) : session(mysqlx::Session(host/*, PORT*/, username, pwd)),
                                schema(session.createSchema(schema, true)) {
-    session.sql("USE test;").execute();
+    session.sql("USE AliasApp;").execute();
 //    session.sql("CREATE TABLE IF NOT EXISTS user (id INT PRIMARY KEY AUTO_INCREMENT, login VARCHAR(20) UNIQUE, username VARCHAR(30), password VARCHAR(30));").execute();
 //    session.sql(
 //            "CREATE TABLE IF NOT EXISTS task (id INT PRIMARY KEY AUTO_INCREMENT, head VARCHAR(100) NOT NULL, body VARCHAR(2500), completion BOOL DEFAULT 0, assigner_id INT NOT NULL, FOREIGN KEY (assigner_id) REFERENCES user(id), executor_id INT NOT NULL, FOREIGN KEY (executor_id) REFERENCES user(id));").execute();
